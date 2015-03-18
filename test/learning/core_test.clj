@@ -11,8 +11,8 @@
 
 (deftest fizz-buzz
   (testing "Unchanged numbers"
-    (is (= (2 (fizzbuzz 2))))
-    (is (= (7 (fizzbuzz 7)))))
+    (is (= 2 (fizzbuzz 2)))
+    (is (= 7 (fizzbuzz 7))))
   (testing "6 is fizz"
     (is (= (fizzbuzz 6) "fizz")))
   (testing "10 is buzz"
