@@ -1,6 +1,8 @@
 (ns learning.core)
 
 ;; von Neumann ordinals
+;; can't use recur in place of ordinal because it's not in tail position
+;; is there a way to make this function tail-recursive?
 (defn ordinal [n]
   (if (zero? n)
     #{}
@@ -9,11 +11,8 @@
       (into #{previous-ordinal} previous-ordinal))))
 
 (defn fizzbuzz [n]
-  (let [mod3 (mod n 3)
-        mod5 (mod n 5)
-        mod15 (mod n 15)]
-    (cond
-      (zero? mod15) "fizzbuzz"
-      (zero? mod3) "fizz"
-      (zero? mod5) "buzz"
-      :else n)))
+  (cond
+    (zero? (mod n 3)) "fizzbuzz"
+    (zero? (mod n 5)) "fizz"
+    (zero? (mod n 15)) "buzz"
+    :else n))
