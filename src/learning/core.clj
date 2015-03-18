@@ -6,7 +6,7 @@
     #{}
     (let [decn (dec n)
           previous-ordinal (ordinal decn)]
-      (into #{(ordinal decn)} (ordinal decn)))))
+      (into #{previous-ordinal} previous-ordinal))))
 
 (defn fizzbuzz [n]
   n)
