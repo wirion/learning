@@ -7,8 +7,8 @@
   (if (zero? n)
     #{}
     (let [decn (dec n)
-          previous-ordinal (ordinal decn)]
-      (into #{previous-ordinal} previous-ordinal))))
+          deco (ordinal decn)]
+      (into #{deco} deco))))
 
 (defn fizzbuzz [n]
   (cond
