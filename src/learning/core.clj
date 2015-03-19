@@ -12,7 +12,7 @@
 
 (defn fizzbuzz [n]
   (cond
-    (zero? (mod n 3)) "fizzbuzz"
-    (zero? (mod n 5)) "fizz"
-    (zero? (mod n 15)) "buzz"
+    (zero? (mod n 15)) "fizzbuzz"
+    (zero? (mod n 3)) "fizz"
+    (zero? (mod n 5)) "buzz"
     :else n))
