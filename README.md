@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wirion/learning-clojure.svg?branch=master)](https://travis-ci.org/wirion/learning-clojure)
+
 # learning
 
 A library to document my learning of clojure functionality and idioms, based on Meagan Waller's [post](http://meaganwaller.com/clojure-katas-fizzbuzz/).
