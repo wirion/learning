@@ -16,3 +16,14 @@
     (zero? (mod n 3)) "fizz"
     (zero? (mod n 5)) "buzz"
     :else n))
+
+(defn- stair [n m]
+  (apply str (concat (take (- n m) (repeat " "))
+                     (take m (repeat \#)))))
+
+(defn staircase [n]
+  (loop [m 1]
+    (if (<= m n)
+      (do
+        (println (stair n m))
+        (recur (inc m))))))
